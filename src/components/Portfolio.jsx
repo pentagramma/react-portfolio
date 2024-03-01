@@ -3,8 +3,8 @@ import myPortfolio from '../assets/portfolio/myPortfolio.png'
 import amazonClone from '../assets/portfolio/amazonClone.jpg'
 import todoList from '../assets/portfolio/todoList.jpg'
 import newsWebsite from '../assets/portfolio/newsWebsite.png'
-import reactParallax from '../assets/portfolio/reactParallax.jpg'
-import reactWeather from '../assets/portfolio/reactWeather.jpg'
+import texteditor from '../assets/portfolio/texteditor.png'
+import rps from '../assets/portfolio/rps.jpeg'
 
 const Portfolio = () => {
 
@@ -27,11 +27,11 @@ const Portfolio = () => {
     },
     {
       id: 5,
-      src: reactParallax
+      src: texteditor
     },
     {
       id: 6,
-      src: reactWeather
+      src: rps
     },
 
   ]
