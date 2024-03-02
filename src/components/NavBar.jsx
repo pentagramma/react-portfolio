@@ -22,14 +22,14 @@ const TypingEffect = ({ text }) => {
             setDisplayText('');
           }, 3500); // Repeat every 3.5 seconds
         }
-      }, 200); // Adjust typing speed (200 milliseconds)
+      }, 400); // Adjust typing speed (200 milliseconds)
     };
 
     startTyping();
 
     const cursorInterval = setInterval(() => {
       setShowCursor((prevShowCursor) => !prevShowCursor);
-    }, 500); // Cursor blinking interval
+    }, 300); // Cursor blinking interval
 
     return () => {
       clearInterval(typingInterval);
@@ -78,7 +78,7 @@ const Navbar = () => {
     <div className='flex justify-between items-center w-full h-20 text-white fixed bg-black px-4 z-50'>
       <div>
         <h1 className='text-5xl font-signature ml-2 text-violet-300'>
-          <TypingEffect text="</> सार्थक" />
+          <TypingEffect text="< सार्थक/>; " />
         </h1>
       </div>
       <div className='md:hidden cursor-pointer pr-3 z-10 text-gray-400' onClick={toggleNav}>
