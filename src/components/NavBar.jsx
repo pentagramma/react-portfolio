@@ -2,6 +2,49 @@ import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
 
+const TypingEffect = ({ text }) => {
+  const [displayText, setDisplayText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    let typingInterval = null;
+
+    const startTyping = () => {
+      typingInterval = setInterval(() => {
+        if (currentIndex <= text.length) {
+          setDisplayText(text.substring(0, currentIndex));
+          setCurrentIndex(currentIndex + 1);
+        } else {
+          clearInterval(typingInterval);
+          setTimeout(() => {
+            setCurrentIndex(0);
+            setDisplayText('');
+          }, 3500); // Repeat every 4 seconds
+        }
+      }, 200); // Adjust typing speed (decreased to 200 milliseconds)
+    };
+
+    startTyping();
+
+    const cursorInterval = setInterval(() => {
+      setShowCursor((prevShowCursor) => !prevShowCursor);
+    }, 500); // Cursor blinking interval
+
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(cursorInterval);
+    };
+  }, [text, currentIndex]);
+
+  return (
+    <span>
+      {displayText}
+      {showCursor && <span className="cursor">?</span>}
+    </span>
+  );
+};
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -21,8 +64,8 @@ const Navbar = () => {
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-      if (window.innerWidth > 768) { // Adjust this value according to your breakpoint
-        setNav(false); // Close the nav when the viewport width is larger than 768px
+      if (window.innerWidth > 768) {
+        setNav(false);
       }
     };
 
@@ -34,9 +77,11 @@ const Navbar = () => {
   return (
     <div className='flex justify-between items-center w-full h-20 text-white fixed bg-black px-4 z-50'>
       <div>
-        <h1 className='text-5xl font-signature ml-2 text-violet-300'></h1>
+        <h1 className='text-5xl font-signature ml-2 text-violet-300'>
+          <TypingEffect text="</> सार्थक" />
+        </h1>
       </div>
-      {windowWidth <= 768 && ( // Render hamburger menu only for small screens
+      {windowWidth <= 768 && (
         <div
           onClick={toggleNav}
           className='cursor-pointer pr-3 z-10 text-gray-400 md:hidden'
