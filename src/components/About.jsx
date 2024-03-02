@@ -21,7 +21,7 @@ const About = () => {
 
         <p className='text-xl'>
 
-          A dedicated web developer proficient in React.js, Node.js, and Tailwind CSS, driven by determination and consistency. Apart from coding, I indulge in sports like football and badminton, seek inspiration from books, and find joy in gaming with Valorant, CS:GO, and Dota 2. Passionate about competitive gaming, fueled by coffee for excellence.
+        Apart from coding, I indulge in sports like football and badminton, seek inspiration from books, and find joy in gaming with Valorant, CS:GO, and Dota 2. Passionate about competitive gaming, fueled by coffee for excellence.
         </p>
       </div>
 

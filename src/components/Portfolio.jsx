@@ -11,59 +11,69 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: amazonClone
+      src: amazonClone,
+      repoLink: 'https://github.com/pentagramma/Amazon-clone'
     },
     {
       id: 2,
-      src: myPortfolio
+      src: myPortfolio,
+      repoLink: 'https://github.com/pentagramma/react-portfolio'
     },
     {
       id: 3,
-      src: todoList
+      src: todoList,
+      repoLink: 'https://github.com/pentagramma/todoList'
     },
     {
       id: 4,
-      src: newsWebsite
+      src: newsWebsite,
+      repoLink: 'https://github.com/pentagramma/Real-time-news'
     },
     {
       id: 5,
-      src: texteditor
+      src: texteditor,
+      repoLink: 'https://github.com/pentagramma/text-editor'
     },
     {
       id: 6,
-      src: rps
+      src: rps,
+      repoLink: 'https://github.com/pentagramma/Rock-Paper-Scissors'
     },
 
   ]
 
   return (
-    <div name = "portfolio" className='bg-gradient-to-b from-black to-gray-800 text-gray-400 md:h-fit'>
+    <div name="portfolio" className='bg-gradient-to-b from-black to-gray-800 text-gray-400 md:h-fit'>
 
       <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
         <div className='pb-6'>
           <p className='text-4xl font-bold inline border-b-4 border-yellow-200'>
             Portfolio
-            </p>
+          </p>
           <p className='py-4'>Check out some of my personal projects!</p>
         </div>
 
-       
+
 
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-6 px-12 sm:px-0'>
-        {
-          portfolios.map(({id,src}) => (
-            <div key={id} className='rounded-lg hover:scale-110 duration-200 border-solid border-2 hover:border-yellow-500 hover:border-double'>
-            <img src= {src} alt="" className='rounded-md' />
-            <div className='flex items-center justify-center'>
-              <button className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 hover:scale-110 duration-200 hover:bg-black hover:text-yellow-500'>Demo</button>
-              <button className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 hover:scale-110 duration-200 hover:bg-black hover:text-yellow-500'>Code</button>
-            </div>
-          </div>
+          {
+            portfolios.map(({ id, src, repoLink }) => (
+              <div key={id} className='rounded-lg hover:scale-110 duration-200 border-solid border-2 hover:border-yellow-500 hover:border-double'>
+                <img src={src} alt="" className='rounded-md' />
+                <div className='flex items-center justify-center'>
+                  <button className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 hover:scale-110 duration-200 hover:bg-black hover:text-yellow-500'>Demo</button>
+                  <button
+                    className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 hover:scale-110 duration-200 hover:bg-black hover:text-yellow-500'
+                    onClick={() => window.open(repoLink, '_blank')}
+                  >
+                    Code
+                  </button>
+                </div>
+              </div>
+            ))
+          }
 
-          ))
-        }
 
-          
         </div>
       </div>
     </div>
