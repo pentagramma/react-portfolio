@@ -31,7 +31,7 @@ const Portfolio = () => {
       id: 4,
       src: newsWebsite,
       repoLink: 'https://github.com/pentagramma/Real-time-news',
-      demoLink: 'https://drive.google.com/drive/folders/10D2G7iR3O2fWa5k9oWEAECxt_1ICIzfi',
+      demoLink: 'https://drive.google.com/file/d/1Vnu5Il8o8tdNWy7K40MAMJr2Z9isonyA/view?usp=drive_link',
     },
     {
       id: 5,
