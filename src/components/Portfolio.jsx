@@ -12,32 +12,38 @@ const Portfolio = () => {
     {
       id: 1,
       src: amazonClone,
-      repoLink: 'https://github.com/pentagramma/Amazon-clone'
+      repoLink: 'https://github.com/pentagramma/Amazon-clone',
+      demoLink: 'https://sarthaks-amazonclone.netlify.app/',
     },
     {
       id: 2,
       src: myPortfolio,
-      repoLink: 'https://github.com/pentagramma/react-portfolio'
+      repoLink: 'https://github.com/pentagramma/react-portfolio',
+      demoLink: 'https://portfolio-krsarthak.netlify.app/',
     },
     {
       id: 3,
       src: todoList,
-      repoLink: 'https://github.com/pentagramma/todoList'
+      repoLink: 'https://github.com/pentagramma/todoList',
+      demoLink: 'https://sarthak-todolist.netlify.app/',
     },
     {
       id: 4,
       src: newsWebsite,
-      repoLink: 'https://github.com/pentagramma/Real-time-news'
+      repoLink: 'https://github.com/pentagramma/Real-time-news',
+      demoLink: 'https"//google.com/',
     },
     {
       id: 5,
       src: texteditor,
-      repoLink: 'https://github.com/pentagramma/text-editor'
+      repoLink: 'https://github.com/pentagramma/text-editor',
+      demoLink: 'https://sarthaks-text-editor.netlify.app/',
     },
     {
       id: 6,
       src: rps,
-      repoLink: 'https://github.com/pentagramma/Rock-Paper-Scissors'
+      repoLink: 'https://github.com/pentagramma/Rock-Paper-Scissors',
+      demoLink: 'https://sarthak-rps-vanilla.netlify.app/',
     },
 
   ]
@@ -57,11 +63,11 @@ const Portfolio = () => {
 
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-6 px-12 sm:px-0'>
           {
-            portfolios.map(({ id, src, repoLink }) => (
+            portfolios.map(({ id, src, repoLink, demoLink }) => (
               <div key={id} className='rounded-lg hover:scale-110 duration-200 border-solid border-2 hover:border-yellow-500 hover:border-double'>
                 <img src={src} alt="" className='rounded-md' />
                 <div className='flex items-center justify-center'>
-                  <button className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 hover:scale-110 duration-200 hover:bg-black hover:text-yellow-500'>Demo</button>
+                  <button className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 hover:scale-110 duration-200 hover:bg-black hover:text-yellow-500' onClick={() => window.open(demoLink, '_blank')}>Demo</button>
                   <button
                     className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 hover:scale-110 duration-200 hover:bg-black hover:text-yellow-500'
                     onClick={() => window.open(repoLink, '_blank')}
