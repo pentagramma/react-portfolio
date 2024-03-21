@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
+import { MdOutlineMail } from "react-icons/md";
+import { FaLinkedin } from "react-icons/fa";
+import { FaRegIdCard } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const TypingEffect = ({ text }) => {
   const [displayText, setDisplayText] = useState('');
@@ -57,6 +61,20 @@ const Navbar = () => {
     { id: 5, link: 'contact' },
   ];
 
+  const links1 = [
+    { id1: 1, link1: <a href="https://www.linkedin.com/in/sarthak-kumar-034276258/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a> },
+    {
+      id1: 2, link1: (
+        <a href="/resume.pdf" download>
+          <FaRegIdCard />
+        </a>
+      )
+    },
+    { id1: 3, link1: <a href="https://github.com/pentagramma" target="_blank" rel="noopener noreferrer"><FaGithub /></a> },
+    { id1: 4, link1: <a href="mailto:krsarthak.17@gmail.com"><MdOutlineMail /></a> },
+  ];
+
+
   const toggleNav = () => {
     setNav(!nav);
   };
@@ -86,20 +104,32 @@ const Navbar = () => {
       </div>
 
       {nav && (
-        <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black via-black to-gray-800 text-gray-500'>
-          {links.map(({ id, link }) => (
-            <li key={id} className='px-4 cursor-pointer capitalize py-6 text-4xl text-gray-500 hover:scale-110 duration-200'>
-              <ScrollLink
-                to={link}
-                smooth
-                duration={900}
-                offset={-59}
-                onClick={toggleNav}
-              >
-                {link}
-              </ScrollLink>
-            </li>
-          ))}
+        <ul className='flex flex-col absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black via-black to-gray-800 text-gray-500'>
+          {/* Vertical column for links */}
+          <div className="flex flex-col justify-center items-center mt-[100px]">
+            {links.map(({ id, link }) => (
+              <li key={id} className='px-4 cursor-pointer capitalize py-6 text-4xl text-gray-500 hover:scale-110 duration-200'>
+                <ScrollLink
+                  to={link}
+                  smooth
+                  duration={900}
+                  offset={-59}
+                  onClick={toggleNav}
+                >
+                  {link}
+                </ScrollLink>
+              </li>
+            ))}
+          </div>
+
+          {/* Horizontal row for links1 */}
+          <div className="flex justify-around items-center mt-20">
+            {links1.map(({ id1, link1 }) => (
+              <li key={id1} className='px-4 cursor-pointer capitalize py-6 text-4xl text-gray-500 hover:scale-110 duration-200'>
+                {link1}
+              </li>
+            ))}
+          </div>
         </ul>
       )}
 
