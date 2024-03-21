@@ -44,7 +44,7 @@ const TypingEffect = ({ text }) => {
   return (
     <span>
       {displayText}
-      {showCursor && <span className="cursor">?</span>}
+      {showCursor && <span className="cursor">_</span>}
     </span>
   );
 };
@@ -96,7 +96,7 @@ const Navbar = () => {
     <div className='flex justify-between items-center w-full h-20 text-white fixed bg-black px-4 z-50'>
       <div>
         <h1 className='text-5xl font-signature ml-2 text-violet-300'>
-          <TypingEffect text="< सार्थक/>; " />
+          <TypingEffect text="< सार्थक/>" />
         </h1>
       </div>
       <div className='md:hidden cursor-pointer pr-3 z-10 text-gray-400' onClick={toggleNav}>
