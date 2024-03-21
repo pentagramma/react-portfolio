@@ -123,7 +123,7 @@ const Navbar = () => {
           </div>
 
           {/* Horizontal row for links1 */}
-          <div className="flex justify-around items-center mt-20">
+          <div className="flex justify-around items-center mt-[80px]">
             {links1.map(({ id1, link1 }) => (
               <li key={id1} className='px-4 cursor-pointer capitalize py-6 text-4xl text-gray-500 hover:scale-110 duration-200'>
                 {link1}
