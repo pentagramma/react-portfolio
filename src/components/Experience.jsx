@@ -8,7 +8,7 @@ import tailwind from '../assets/tailwind.png'
 import nodeJS from '../assets/node.png'
 import git from '../assets/git.png'
 import github from '../assets/github.png'
-import mongoDB from '../assets/mongoDB.png'
+
 
 
 const Experience = () => {
@@ -70,7 +70,7 @@ const Experience = () => {
       style: 'shadow-stone-400 hover:shadow-white',
       link: 'https://github.com/'
     },
- 
+
   ]
   return (
     <div name='experience' className='bg-gradient-to-b from-gray-800 to-black w-full h-fit pt-3 '>
@@ -82,17 +82,17 @@ const Experience = () => {
         </div>
         <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-6 text-center py-8 px-12 sm:px-0'>
 
-              {
-        techs.map(({ id, source, title, style, link }) => (
-          <a key={id} href={link} target="_blank" rel="noopener noreferrer">
-            <div 
-              className={`shadow-md hover:scale-105 duration-500 py-4 rounded-lg ${style}`}>
-              <img src={source} alt="" className='w-20 mx-auto' />
-              <p className='mt-4'>{title}</p>
-            </div>
-          </a>
-        ))
-      }
+          {
+            techs.map(({ id, source, title, style, link }) => (
+              <a key={id} href={link} target="_blank" rel="noopener noreferrer">
+                <div
+                  className={`shadow-md hover:scale-105 duration-500 py-4 rounded-lg ${style}`}>
+                  <img src={source} alt="" className='w-20 mx-auto' />
+                  <p className='mt-4'>{title}</p>
+                </div>
+              </a>
+            ))
+          }
 
 
         </div>

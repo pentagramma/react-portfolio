@@ -42,8 +42,8 @@ const Portfolio = () => {
     {
       id: 6,
       src: rps,
-      repoLink: 'https://github.com/pentagramma/Rock-Paper-Scissors',
-      demoLink: 'https://sarthak-rps-vanilla.netlify.app/',
+      repoLink: 'https://github.com/pentagramma/ThunderConcept',
+      demoLink: 'https://thunderconcept.netlify.app/',
     },
 
   ]
