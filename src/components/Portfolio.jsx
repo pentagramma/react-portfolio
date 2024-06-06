@@ -5,6 +5,7 @@ import todoList from '../assets/portfolio/todoList.jpg'
 import newsWebsite from '../assets/portfolio/newsWebsite.png'
 import texteditor from '../assets/portfolio/texteditor.png'
 import rps from '../assets/portfolio/rps.jpeg'
+import quizUp from '../assets/portfolio/quizUp.jpeg'
 
 const Portfolio = () => {
 
@@ -45,6 +46,12 @@ const Portfolio = () => {
       repoLink: 'https://github.com/pentagramma/ThunderConcept',
       demoLink: 'https://thunderconcept.netlify.app/',
     },
+    {
+      id: 7,
+      src: quizUp,
+      repoLink: 'https://github.com/pentagramma/QuizUp',
+      demoLink: 'https://stellar-pudding-08ab00.netlify.app/',
+    },
 
   ]
 
@@ -64,12 +71,12 @@ const Portfolio = () => {
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-6 px-12 sm:px-0'>
           {
             portfolios.map(({ id, src, repoLink, demoLink }) => (
-              <div key={id} className='rounded-lg hover:scale-110 duration-200 border-solid border-2 hover:border-yellow-500 hover:border-double'>
-                <img src={src} alt="" className='rounded-md' />
+              <div key={id} className='rounded-lg hover:scale-110 duration-200 border-solid border-2 hover:border-yellow-500 hover:border-double object-contain'>
+                <img src={src} alt="" className='rounded-md ' />
                 <div className='flex items-center justify-center'>
-                  <button className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 hover:scale-110 duration-200 hover:bg-black hover:text-yellow-500' onClick={() => window.open(demoLink, '_blank')}>Demo</button>
+                  <button className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500  hover:bg-black hover:text-yellow-500 duration-500' onClick={() => window.open(demoLink, '_blank')}>Demo</button>
                   <button
-                    className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 hover:scale-110 duration-200 hover:bg-black hover:text-yellow-500'
+                    className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 duration-500 hover:bg-black hover:text-yellow-500'
                     onClick={() => window.open(repoLink, '_blank')}
                   >
                     Code
