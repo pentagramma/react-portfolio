@@ -45,11 +45,13 @@ const Experience = () => {
     },
     {
       id: 5,
-      source: tailwind,
-      title: 'TailwindCSS',
-      style: 'shadow-sky-200 hover:shadow-sky-400',
-      link: 'https://tailwindcss.com/'
+      source: express,
+      title: 'ExpressJs',
+      style: 'shadow-stone-400 hover:shadow-white',
+      link: 'https://expressjs.com/'
     },
+
+    
     {
       id: 6,
       source: nodeJS,
@@ -59,26 +61,26 @@ const Experience = () => {
     },
     {
       id: 7,
+      source: tailwind,
+      title: 'TailwindCSS',
+      style: 'shadow-sky-200 hover:shadow-sky-400',
+      link: 'https://tailwindcss.com/'
+    },
+    {
+      id: 8,
       source: git,
       title: 'Git',
       style: 'shadow-red-300 hover:shadow-red-600',
       link: 'https://git-scm.com/'
     },
     {
-      id: 8,
+      id: 9,
       source: github,
       title: 'GitHub',
       style: 'shadow-stone-400 hover:shadow-white',
       link: 'https://github.com/'
     },
-    {
-      id: 98,
-      source: express,
-      title: 'ExpressJs',
-      style: 'shadow-stone-400 hover:shadow-white',
-      link: 'https://github.com/'
-    },
-
+    
   ]
   return (
     <div name='experience' className='bg-gradient-to-b from-gray-800 to-black w-full h-fit pt-3 '>
