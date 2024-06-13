@@ -8,6 +8,7 @@ import tailwind from '../assets/tailwind.png'
 import nodeJS from '../assets/node.png'
 import git from '../assets/git.png'
 import github from '../assets/github.png'
+import express from '../assets/expressJS.png'
 
 
 
@@ -38,21 +39,21 @@ const Experience = () => {
     {
       id: 4,
       source: reactImage,
-      title: 'React JS',
+      title: 'ReactJS',
       style: 'shadow-blue-300 hover:shadow-blue-600',
       link: 'https://react.dev/'
     },
     {
       id: 5,
       source: tailwind,
-      title: 'Tailwind CSS',
+      title: 'TailwindCSS',
       style: 'shadow-sky-200 hover:shadow-sky-400',
       link: 'https://tailwindcss.com/'
     },
     {
       id: 6,
       source: nodeJS,
-      title: 'Node JS',
+      title: 'NodeJS',
       style: 'shadow-lime-200 hover:shadow-lime-500',
       link: 'https://nodejs.org/en'
     },
@@ -67,6 +68,13 @@ const Experience = () => {
       id: 8,
       source: github,
       title: 'GitHub',
+      style: 'shadow-stone-400 hover:shadow-white',
+      link: 'https://github.com/'
+    },
+    {
+      id: 98,
+      source: express,
+      title: 'ExpressJs',
       style: 'shadow-stone-400 hover:shadow-white',
       link: 'https://github.com/'
     },
