@@ -74,9 +74,9 @@ const Portfolio = () => {
               <div key={id} className='rounded-lg hover:scale-110 duration-200 border-solid border-2 hover:border-yellow-500 hover:border-double object-contain'>
                 <img src={src} alt="" className='rounded-md ' />
                 <div className='flex items-center justify-center'>
-                  <button className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500  hover:bg-black hover:text-yellow-500 duration-500' onClick={() => window.open(demoLink, '_blank')}>Demo</button>
+                  <button className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500  hover:bg-black hover:text-yellow-500 duration-500 rounded-md' onClick={() => window.open(demoLink, '_blank')}>Demo</button>
                   <button
-                    className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 duration-500 hover:bg-black hover:text-yellow-500'
+                    className='text-white bg-yellow hover:outline-yellow-500 w-1/2 px-4 py-3 m-4 hover:border border hover:border-yellow-500 duration-500 hover:bg-black hover:text-yellow-500 rounded-md'
                     onClick={() => window.open(repoLink, '_blank')}
                   >
                     Code
