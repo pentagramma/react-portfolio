@@ -52,6 +52,12 @@ const Portfolio = () => {
       repoLink: 'https://github.com/pentagramma/QuizUp',
       demoLink: 'https://stellar-pudding-08ab00.netlify.app/',
     },
+    {
+      id: 8,
+      src: Spotify player,
+      repoLink: 'https://github.com/pentagramma/QuizUp',
+      demoLink: 'https://samespace-spotify-assessment.netlify.app/',
+    },
 
   ]
 
