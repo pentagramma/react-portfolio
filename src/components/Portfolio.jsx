@@ -54,13 +54,13 @@ const Portfolio = () => {
     },
     {
       id: 8,
-      src: Spotify player,
+      src: quizUp,
       repoLink: 'https://github.com/pentagramma/samespace-spotify',
       demoLink:      'https://samespace-spotify-assessment.netlify.app/',
     },
     {
       id: 9,
-      src: Shopping cart,
+      src: quizUp,
       repoLink: 'https://github.com/pentagramma/homble-frontend-assessment',
       demoLink: 'https://hombleassignment.netlify.app',
     },
