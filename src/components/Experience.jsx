@@ -9,7 +9,9 @@ import nodeJS from '../assets/node.png'
 import git from '../assets/git.png'
 import github from '../assets/github.png'
 import express from '../assets/expressJS.png'
-
+import nextjs from '../assets/nextjs.png'
+import native from '../assets/native.png'
+import aws from '../assets/aws.png'
 
 
 const Experience = () => {
@@ -79,6 +81,27 @@ const Experience = () => {
       title: 'GitHub',
       style: 'shadow-stone-400 hover:shadow-white',
       link: 'https://github.com/'
+    },
+    {
+      id: 10,
+      source: nextjs,
+      title: 'NextJS',
+      style: 'shadow-blue-300 hover:shadow-blue-600',
+      link: 'https://nextjs.org/'
+    },
+    {
+      id: 11,
+      source: native,
+      title: 'React Native',
+      style: 'shadow-blue-300 hover:shadow-blue-600',
+      link: 'https://reactnative.dev/'
+    },
+    {
+      id: 12,
+      source: aws,
+      title: 'AWS',
+      style: 'shadow-orange-200 hover:shadow-orange-500',
+      link: 'https://aws.amazon.com/'
     },
     
   ]
